@@ -10,6 +10,10 @@ Some Raspberry Pi's drop WiFi connection which can be awkward for a headless (IO
 
 A Systemd timer fires every 5 minutes and launches a script that pings a preselected host. If the host fails to respond to all pings, the host is rebooted.
 
+## Requirements
+
+`shellcheck` for validating clean script.
+
 ## Usage
 
 Tailor the timer and service file to match local needs. In particular the target IP address in `reboot-wifi-lost.service`.
@@ -29,3 +33,9 @@ sudo systemctl status reboot-wifi-lost.timer
 ## History
 
 Was originally part of private `shell_scripts` repo. Split out to provide better instructions.
+
+## Testing and Q/A
+
+Easiest test is to set the IP address to something where one can manage ping response. Verify that when that host stops respponding, the host under test reboots.
+
+Script is `shellcheck` clean.
