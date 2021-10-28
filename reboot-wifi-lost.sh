@@ -22,7 +22,7 @@ ping_repeat=5
 while [ $count -lt "$ping_repeat" ] ; do
     sleep "$ping_delay"
     # shellcheck disable=SC2015 # SC2015 is intended logic
-    ping -c1 "$1" &> /dev/null && let count="0"|| let count="$count + 1" 
+    ping -c1 "$1" &> /dev/null && (( count="0" )) || (( count="$count + 1" ))
 done
 
 reboot
