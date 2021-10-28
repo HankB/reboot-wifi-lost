@@ -28,4 +28,4 @@ sudo systemctl status reboot-wifi-lost.timer
 
 ## History
 
-Was originally 
+Was originally part of private `shell_scripts` repo. Split out to provide better instructions.

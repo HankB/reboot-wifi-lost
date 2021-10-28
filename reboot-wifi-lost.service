@@ -1,0 +1,7 @@
+[Unit]
+Description=reboot system if WiFi connectivity is lost
+
+[Service]
+Type=oneshot
+ExecStart=/bin/bash /usr/local/sbin/reboot-wifi-lost.sh 192.168.20.1
+
