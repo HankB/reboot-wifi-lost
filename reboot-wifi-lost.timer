@@ -7,4 +7,4 @@ OnCalendar=*:0/5
 # implicitly starts reboot-wifi-lost.service
 
 [Install]
-WantedBy=reboot-wifi-lost.service
+WantedBy=timers.target
